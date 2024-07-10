@@ -15,7 +15,7 @@ class VoiceAssistant:
         self.ears = speech_recognition.Microphone()
         self.eyes = cv2.VideoCapture(0)
         self.modelClass = cv2.CascadeClassifier(r"models/haarcascade_frontalface_default.xml")
-        self.people_faces_memory = # pickle.loads(open("memory/people_faces_memory.pickle", "rb").read())
+        self.people_faces_memory = None  # pickle.loads(open("memory/people_faces_memory.pickle", "rb").read())
         self.facedict = json.load(open("memory/facedict.json", 'r'))
         self.browser = None
         self.buffer = str()
